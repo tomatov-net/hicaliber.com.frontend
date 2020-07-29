@@ -1,4 +1,4 @@
-#Simple SPA frontend
+# Simple SPA frontend
 
 Project has `docker-compose.yml`, to run the app just type `docker-compose up --build`.
 Docker will install all dependencies and run `npm run serve`
