@@ -1,0 +1,12 @@
+FROM node:12
+
+WORKDIR /var/www/test_task
+
+# copy both 'package.json' and 'package-lock.json' (if exist)
+COPY package*.json ./
+
+RUN mkdir -p node_modules
+RUN npm install
+
+COPY . .
+

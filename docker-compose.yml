@@ -1,0 +1,17 @@
+version: "3.7"
+
+services:
+    app-node-ssr:
+      container_name: node-test-task
+      build:
+        context: .
+        dockerfile: ./.docker/node-js-ssr.docker
+      volumes:
+        - ./:/var/www/test_task
+        - ./env.example:/var/www/test_task/.env
+        - /var/www/test_task/node_modules
+      ports:
+        - "6080:8080"
+      command: >
+        sh -c "npm run serve"
+
